@@ -1,5 +1,11 @@
 package Main;
 
+import Arrays.Exercise5.PairSumFinder;
+import LinkedList.Exercise6.SinglyLinkedList;
+import LinkedList.Exercise7.LinkedListReverser;
+import LinkedList.Exercise8.CycleDetector;
+import LinkedList.Node;
+
 public class Main {
     public static void main(String[] args) {
 //      Arrays.Exercise1
@@ -29,6 +35,42 @@ public class Main {
 //        removeDuplicates.removeDuplicates(numbers);
 //        System.out.println(numbers);
 
+//      Arrays.Exercise5
+//        PairSumFinder pairSumFinder = new PairSumFinder();
+//        int[] numbers = {2, 4, 3, 7, 8, 1};
+//        int target = 9;
+//        pairSumFinder.findPairsWithSum(numbers, target);
 
+//      LinkedList.Exercise6
+//        SinglyLinkedList list = new SinglyLinkedList();
+//        list.insert(10);
+//        list.insert(20);
+//        list.insert(30);
+//        list.display();
+//        list.delete(20);
+//        list.display();
+
+//      LinkedList.Exercise7
+//        Node head = new Node(1);
+//        head.next = new Node(2);
+//        head.next.next = new Node(3);
+//        head.next.next.next = new Node(4);
+//        head.next.next.next.next = new Node(5);
+//
+//        LinkedListReverser linkedListReverser = new LinkedListReverser();
+//        Node reversedHead = linkedListReverser.reverseIterative(head);
+//
+//        linkedListReverser.display(reversedHead);
+
+
+//      LinkedList.Exercise8
+        Node head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
+        head.next.next.next.next = head.next;
+
+        CycleDetector cycleDetector = new CycleDetector();
+        System.out.println("Cycle detector = " + cycleDetector.hasCycle(head));
     }
 }
